@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist Cromos Real Murcia</title>
+  
+  <link rel="icon" type="image/jpeg" href="imagesCromos/icono.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="imagesCromos/icono.jpg">
+  <link rel="apple-touch-icon" href="imagesCromos/icono.jpg">
+  
+  <meta property="og:title" content="Checklist Cromos Real Murcia">
+  <meta property="og:description" content="Checklist de todos los cromos existentes del Real Murcia">
+  <meta property="og:image" content="imagesCromos/icono.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Checklist Cromos Real Murcia">
+
+  <!-- Icono para la pantalla de inicio (180x180 recomendado) -->
+  <link rel="apple-touch-icon" href="imagesCromos/icono.jpg">
+
+  <!-- Manifest básico para Android y soporte general -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Loading Section -->
+    <div id="loading" class="card">
+      <div class="loading-spinner"></div>
+      <p>Verificando sesión...</p>
+    </div>
+
+    <!-- Floating User Profile (outside app to prevent flickering) -->
+    <div id="user-profile" class="floating-user-profile" style="visibility: hidden;">
+      <!-- Avatar -->
+      <div class="user-avatar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <!-- Nombre y porcentaje -->
+      <div class="user-info">
+        <span class="user-name-display" id="user-name-display"></span>
+      </div>
+        
+      <!-- Círculo de porcentaje -->
+      <div class="user-progress">
+        <svg width="50" height="50" viewBox="0 0 36 36">
+          <!-- Círculo de fondo -->
+          <circle class="progress-bg" cx="18" cy="18" r="16"/>
+          <!-- Círculo de progreso -->
+          <circle id="progress-circle" class="progress-circle" cx="18" cy="18" r="16"/>
+          <!-- Texto de porcentaje -->
+          <text id="progress-text" class="progress-text" x="18" y="19">0%</text>
+        </svg>
+      </div>
+      
+    </div>
+    <!-- Main App Section -->
+    <div id="app" class="hidden">
+      <header>
+        <img src="imagesCromos/icono-principal.jpg" alt="Icono" class="title-icon">
+        <h1 class="gradient-title">Checklist Cromos Real Murcia</h1>
+      </header>
+      <div id="count-graphic" class="card">
+        <div class="progress-header">
+          <h3>Progreso Personal</h3>
+          <button id="achievements-button" class="achievements-btn" title="Ver Logros Detallados">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <p class="cromos-info"><span id="collected-count">0</span> cromos de <span id="total-cromos">0</span></p>
+        <div class="achievements">
+          <span class="achievement">👑 <span id="crowns-count">0</span></span>
+        </div>
+        
+        <!-- Category Progress -->
+        <div class="collection-progress">
+          <h4>Progreso por Colecciones</h4>
+          <div id="collection-stats"></div>
+        </div>
+      </div>
+      <section id="attractions-list" class="card">
+        <div class="collections-header">
+          <h3>Lista de Colecciones</h3>
+          <button id="help-button" class="help-btn" title="Ver Instrucciones">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <div id="collections-container"></div>
+      </section>
+    </div>
+
+    <!-- User Profile Modal -->
+    <div id="profile-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Personalizar Perfil</h3>
+          <button id="close-modal" class="close-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="profile-form">
+            <div class="form-group">
+              <label for="profile-username">Nombre de usuario</label>
+              <input type="text" id="profile-username" placeholder="Tu nombre de usuario" required>
+            </div>
+            <div class="form-group">
+              <label for="profile-password">Nueva contraseña</label>
+              <input type="password" id="profile-password" placeholder="Deja vacío para mantener la actual">
+            </div>
+            <div class="form-group">
+              <label for="profile-confirm-password">Confirmar nueva contraseña</label>
+              <input type="password" id="profile-confirm-password" placeholder="Confirma la nueva contraseña">
+            </div>
+            <div class="form-actions">
+              <button type="button" id="logout">Cerrar Sesión</button>
+              <button type="submit" class="save-button">Guardar Cambios</button>
+              <button type="button" class="delete-button" id="delete-account">Eliminar Cuenta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Account Confirmation Modal -->
+    <div id="delete-confirm-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+      <div class="modal-content confirm-modal">
+        <div class="modal-header">
+          <h3>Confirmar Eliminación</h3>
+          <button id="close-delete-modal" class="close-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="confirm-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#FF3B30"/>
+            </svg>
+          </div>
+          <div class="confirm-message">
+            <h4>¿Estás seguro?</h4>
+            <p>Esta acción eliminará permanentemente tu cuenta y todos tus datos. Esta acción no se puede deshacer.</p>
+          </div>
+          <div class="confirm-actions">
+            <button type="button" class="cancel-button" id="cancel-delete">Cancelar</button>
+            <button type="button" class="confirm-delete-button" id="confirm-delete">Eliminar Cuenta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Notification Modal -->
+    <div id="success-notification-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+      <div class="modal-content notification-modal">
+        <div class="modal-body">
+          <div class="notification-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#34C759"/>
+            </svg>
+          </div>
+          <div class="notification-message">
+            <h4>¡Éxito!</h4>
+            <p id="notification-text">Cuenta eliminada correctamente</p>
+          </div>
+          <div class="notification-actions">
+            <button type="button" class="notification-button" id="close-notification">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>¿Cómo Funciona el Checklist de Cromos del Real Murcia?</h3>
+          <button id="close-help-modal" class="close-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="help-section">
+            <h4>Sistema de Checklist</h4>
+            <p>Los cromos se dividen por colecciones. Una vez conseguido el cromo, se marcará en el checklist y se tachará</p>
+            <ul>
+              <li><strong>Cromos:</strong> Los items a conseguir son los cromos representados por un botón que al presionarlo se tachará para marcar que se posee</li>
+              <li><strong>Colecciones:</strong> Todos los cromos están agrupados en la colección a la que pertenecen</li>
+              <li><strong>Coronas 👑:</strong> Consigue una corona al conseguir todos los cromos de una colección</li>
+            </ul>
+          </div>
+          
+          <div class="help-section">
+            <h4>Porcentajes de completitud</h4>
+            <p>Los porcentajes muestran cuántos cromos has conseguido tanto globalmente como en cada una de las colecciones:</p>
+            <ul>
+              <li><strong>Bronce 🥉:</strong> 25% de la colección</li>
+              <li><strong>Plata 🥈:</strong> 50% de la colección</li>
+              <li><strong>Oro 🥇​:</strong> 75% de la colección</li>
+              <li><strong>Diamante 💎​:</strong> 100% de la colección</li>
+            </ul>
+          </div>
+          
+          <div class="help-section">
+            <h4>Logros</h4>
+            <p>Completa desafíos específicos para desbloquear logros:</p>
+            <ul>
+              <li><strong>Logros por colecciones:</strong> Consigue todos los cromos de una colección</li>
+              <li><strong>Logros globales:</strong> Consigue cromos y completa la colección global</li>
+            </ul>
+          </div>
+          
+          <div class="help-section">
+            <h4>💡 Consejos</h4>
+            <ul>
+              <li>Las colecciones se pueden colapsar haciendo clic en el encabezado</li>
+              <li>Tu progreso se guarda automáticamente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast Notifications Container -->
+  <div id="toast-container" class="toast-container"></div>
+  
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <script>
+    // Configuración de Firebase (pública)
+    const firebaseConfig = {
+      apiKey: "AIzaSyAsZUfWqIPX0BTRUrhWdyEKh6J9Zcvm7gs",
+      authDomain: "checklist-real-murcia-ea0ec.firebaseapp.com",
+      databaseURL: "https://checklist-real-murcia-ea0ec-default-rtdb.firebaseio.com",
+      projectId: "checklist-real-murcia-ea0ec",
+      storageBucket: "checklist-real-murcia-ea0ec.firebasestorage.app",
+      messagingSenderId: "1000081137110",
+      appId: "1:1000081137110:web:564b3d8ffae8c23afe1877",
+      measurementId: "G-PG7RGNLJFH"
+    };
+
+    // Inicializa Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Referencia global a la base de datos para usar en script.js
+    const database = firebase.database();
+  </script>
+
+  <!-- Tu script debe ir al final -->
+  <script src="script.js"></script>
+</body>
+</html>
