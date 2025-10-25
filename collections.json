@@ -2,8 +2,24 @@
   {
     "nombre": "Temporada 2009/10",
     "cromos": [
-
+      "Cromo 1"
     ],
     "portada": ""
+  },
+  {
+    "nombre":"Temporada 2025/26",
+    "cromos": [
+      "Megacracks Elite Isco",
+      "Megacracks Elite Power Isco",
+      "Megacracks Isco Normal",
+      "Megacracks Flashback Denilson/Isco",
+      "Megacracks MegaPower",
+      "Megacracks Special One Black Isco",
+      "Liga Este Isco Normal",
+      "Liga Este Mix Isco/Lo Celso",
+      "Liga Este Isco Extra Gold",
+      "Liga Este Isco Chicles/Top Star"
+    ],
+    "portada": "imagesAlbumes/temporada25-26.jpg"
   }
 ]

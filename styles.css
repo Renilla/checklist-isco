@@ -15,8 +15,6 @@
   --text-secondary: #8E8E93;
   --text-tertiary: #C7C7CC;
   --border-color: #C6C6C8;
-  --murcia-red: #800000;
-  --murcia-red-darker: #4b0000;
   --shadow-light: rgba(0, 0, 0, 0.1);
   --shadow-medium: rgba(0, 0, 0, 0.15);
   
@@ -129,7 +127,7 @@ body::before {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: var(--spacing-xl);
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   letter-spacing: -0.5px;
 }
 
@@ -157,9 +155,8 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
   outline: none;
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
   background: var(--background-secondary);
-  box-shadow: var(--murcia-red-darker);
 }
 
 input::placeholder {
@@ -200,8 +197,8 @@ input::placeholder {
 }
 
 .remember-session input[type="checkbox"]:checked + .checkmark {
-  background: var(--murcia-red);
-  border-color: var(--murcia-red);
+  background: var(--secondary-blue);
+  border-color: var(--secondary-blue);
 }
 
 .remember-session input[type="checkbox"]:checked + .checkmark::after {
@@ -217,12 +214,12 @@ input::placeholder {
 }
 
 .remember-session:hover .checkmark {
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
 }
 
 /* Button Design */
 button {
-  background: var(--murcia-red);
+  background: var(--secondary-blue);
   color: white;
   border: none;
   padding: var(--spacing-md) var(--spacing-xl);
@@ -237,9 +234,9 @@ button {
 }
 
 button:hover {
-  background: var(--murcia-red-darker);
+  background: var(--success-green);
   transform: translateY(-1px);
-  box-shadow: var(--murcia-red);
+  box-shadow: var(--success-green);
 }
 
 button:active {
@@ -264,12 +261,12 @@ button:active {
 
 button.secondary {
   background: var(--background-tertiary);
-  color: var(--murcia-red);
-  border: 2px solid var(--murcia-red);
+  color: var(--secondary-blue);
+  border: 2px solid var(--secondary-blue);
 }
 
 button.secondary:hover {
-  background: var(--murcia-red);
+  background: var(--secondary-blue);
   color: white;
 }
 
@@ -296,14 +293,14 @@ button.danger:hover {
 }
 
 #toggle-link {
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   cursor: pointer;
   font-weight: 500;
   transition: color var(--transition-fast);
 }
 
 #toggle-link:hover {
-  color: var(--murcia-red-darker);
+  color: var(--success-green);
   text-decoration: underline;
 }
 
@@ -340,7 +337,7 @@ header h1 {
 }
 
 .gradient-title {
-  background: linear-gradient(135deg, var(--murcia-red-darker) 0%, #9c9c9c 50%, var(--murcia-red) 100%);
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--secondary-blue) 50%, var(--success-green) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -420,7 +417,7 @@ header h1 {
 
 #user-profile:hover {
   background: var(--background-tertiary);
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px var(--shadow-medium);
 }
@@ -432,7 +429,7 @@ header h1 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--murcia-red);
+  background: var(--secondary-blue);
   color: white;
   font-size: 16px;
 }
@@ -461,7 +458,7 @@ header h1 {
 
 #progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--murcia-red), var(--murcia-red-darker));
+  background: linear-gradient(90deg, var(--secondary-blue), var(--success-green));
   border-radius: 4px;
   transition: width var(--transition-slow) ease-out;
   position: relative;
@@ -496,13 +493,13 @@ header h1 {
 }
 
 #collected-count {
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   font-weight: 600;
   font-size: 24px;
 }
 
 #total-cromos {
-  color: var(--murcia-red-darker);
+  color: var(--success-green);
   font-weight: 600;
   font-size: 24px;
 }
@@ -530,7 +527,7 @@ header h1 {
 
 /* Círculo dinámico del progreso */
 .progress-circle {
-  stroke: var(--murcia-red);
+  stroke: var(--secondary-blue);
   stroke-width: 3;
   fill: none;
   stroke-linecap: round;
@@ -574,7 +571,7 @@ header h1 {
   align-items: center;
   gap: var(--spacing-sm);
   font-weight: 600;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   margin-left: var(--spacing-xl);
   flex-shrink: 0;
   min-width: 3em;
@@ -615,7 +612,7 @@ header h1 {
   margin-bottom: var(--spacing-lg);
   font-size: 20px;
   font-weight: 600;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
 }
 
 /* Progress Header */
@@ -629,14 +626,14 @@ header h1 {
 .progress-header h3 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   margin: 0;
 }
 
 .achievements-btn {
   background: var(--background-tertiary);
-  color: var(--murcia-red);
-  border: 2px solid var(--murcia-red);
+  color: var(--secondary-blue);
+  border: 2px solid var(--secondary-blue);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   display: flex;
@@ -649,10 +646,10 @@ header h1 {
 }
 
 .achievements-btn:hover {
-  background: var(--murcia-red);
+  background: var(--secondary-blue);
   color: white;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 255, 234, 0.3);
 }
 
 .achievements-btn:active {
@@ -675,8 +672,8 @@ header h1 {
 
 .help-btn {
   background: var(--background-tertiary);
-  color: var(--murcia-red);
-  border: 2px solid var(--murcia-red);
+  color: var(--secondary-blue);
+  border: 2px solid var(--secondary-blue);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   display: flex;
@@ -689,10 +686,10 @@ header h1 {
 }
 
 .help-btn:hover {
-  background: var(--murcia-red);
+  background: var(--secondary-blue);
   color: white;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 225, 255, 0.3);
 }
 
 .help-btn:active {
@@ -717,7 +714,7 @@ header h1 {
 .help-section h4 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   margin-bottom: var(--spacing-md);
   display: flex;
   align-items: center;
@@ -751,7 +748,7 @@ header h1 {
   content: '•';
   position: absolute;
   left: 0;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   font-weight: bold;
 }
 
@@ -928,7 +925,7 @@ header h1 {
 /* Focus States for Accessibility */
 button:focus,
 input:focus {
-  outline: 2px solid var(--murcia-red);
+  outline: 2px solid var(--secondary-blue);
   outline-offset: 2px;
 }
 
@@ -987,7 +984,7 @@ input:focus {
 .collection-title {
   font-size: 18px;
   font-weight: bold;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
@@ -1110,7 +1107,7 @@ input:focus {
 .collection-progress h4 {
   font-size: 16px;
   font-weight: 600;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   margin-bottom: var(--spacing-md);
 }
 
@@ -1139,12 +1136,12 @@ input:focus {
   height: 5px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: var(--murcia-red);
+  background: var(--secondary-blue);
 }
 
 .collection-stat:hover {
   background: var(--background-secondary);
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
   transform: translateY(-1px);
   box-shadow: 0 2px 8px var(--shadow-light);
 }
@@ -1169,7 +1166,7 @@ input:focus {
 
 #total-points {
   font-weight: 600;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
 }
 
 .achievements {
@@ -1269,7 +1266,7 @@ input:focus {
 .modal-header h3 {
   font-size: 20px;
   font-weight: bold;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   margin: 0;
 }
 
@@ -1302,7 +1299,7 @@ input:focus {
 .form-group label {
   display: block;
   font-weight: 500;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   margin-bottom: var(--spacing-sm);
   font-size: 14px;
 }
@@ -1322,7 +1319,7 @@ input:focus {
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
   background: var(--background-secondary);
   box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
 }
@@ -1457,12 +1454,6 @@ input:focus {
   .user-info {
     display: none;
   }
-
-  /*
-  .user-progress {
-    display: none;
-  }
-  */
   
   #user-profile {
     position: fixed;
@@ -1626,7 +1617,7 @@ input:focus {
 .back-button {
   background: none;
   border: none;
-  color: var(--murcia-red);
+  color: var(--secondary-blue);
   cursor: pointer;
   padding: var(--spacing-sm);
   border-radius: var(--radius-sm);
@@ -1638,7 +1629,7 @@ input:focus {
 }
 
 .back-button:hover {
-  background: rgba(255, 0, 0, 0.1);
+  background: rgba(0, 255, 13, 0.1);
 }
 
 .back-button svg {
@@ -1739,7 +1730,7 @@ input:focus {
 .achievement-item:hover {
   transform: translateX(4px);
   box-shadow: 0 2px 8px var(--shadow-light);
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
 }
 
 .achievement-medal {
@@ -1878,7 +1869,7 @@ input:focus {
 .achievement-stat:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px var(--shadow-light);
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
 }
 
 .stat-icon {
@@ -1937,7 +1928,7 @@ input:focus {
 
 #user-profile-achievements:hover {
   background: var(--background-tertiary);
-  border-color: var(--murcia-red);
+  border-color: var(--secondary-blue);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px var(--shadow-medium);
 }
@@ -1999,7 +1990,7 @@ input:focus {
   width: 40px;
   height: 40px;
   border: 3px solid var(--border-color);
-  border-top: 3px solid var(--murcia-red);
+  border-top: 3px solid var(--secondary-blue);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto var(--spacing-lg);
