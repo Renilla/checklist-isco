@@ -7,6 +7,22 @@
     "portada": ""
   },
   {
+    "nombre": "Temporada 2024/25",
+    "cromos": [
+      "Megacracks Elite Isco",
+      "Megacracks Elite Power Isco",
+      "Megacracks Isco Normal",
+      "Liga Este Isco Normal",
+      "Liga Este Show Isco",
+      "Liga Este Extra Gold Isco",
+      "Liga Este Chicles/The Very Best Isco",
+      "Adrenalyn XL Isco Capitán",
+      "UEFA Club Competitions 24/25 Isco",
+      "UEFA Club Competitions 24/25 Isco Trophy Chasers"
+    ],
+    "portada": ""
+  },
+  {
     "nombre":"Temporada 2025/26",
     "cromos": [
       "Megacracks Elite Isco",
@@ -17,8 +33,8 @@
       "Megacracks Special One Black Isco",
       "Liga Este Isco Normal",
       "Liga Este Mix Isco/Lo Celso",
-      "Liga Este Isco Extra Gold",
-      "Liga Este Isco Chicles/Top Star"
+      "Liga Este Extra Gold Isco",
+      "Liga Este Chicles/Top Star Isco"
     ],
     "portada": "imagesAlbumes/temporada25-26.jpg"
   }
