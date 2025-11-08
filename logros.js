@@ -4,7 +4,21 @@ let collections = [];
 
 // Mapeo de colecciones a nombres de logros
 const achievementMapping = {
-  "Temporada 2009/10": "Temporada 2009/10",
+  "Temporada 2010/11": "Temporada 2010/11",
+  "Temporada 2011/12": "Temporada 2011/12",
+  "Temporada 2012/13": "Temporada 2012/13",
+  "Temporada 2013/14": "Temporada 2013/14",
+  "Temporada 2014/15": "Temporada 2014/15",
+  "Temporada 2015/16": "Temporada 2015/16",
+  "Temporada 2016/17": "Temporada 2016/17",
+  "Temporada 2017/18": "Temporada 2017/18",
+  "Temporada 2018/19": "Temporada 2018/19",
+  "Temporada 2019/20": "Temporada 2019/20",
+  "Temporada 2020/21": "Temporada 2020/21",
+  "Temporada 2021/22": "Temporada 2021/22",
+  "Temporada 2022/23": "Temporada 2022/23",
+  "Temporada 2023/24": "Temporada 2023/24",
+  "Temporada 2024/25": "Temporada 2024/25",
   "Temporada 2025/26": "Temporada 2025/26"
 };
 

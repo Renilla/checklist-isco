@@ -1,8 +1,166 @@
 [
   {
-    "nombre": "Temporada 2009/10",
+    "nombre": "Temporada 2010/11",
     "cromos": [
-      "Cromo 1"
+      "Las Fichas de la Liga Isco",
+      "Figuplay Mundial Sub-20 Isco"
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2011/12",
+    "cromos": [
+      "Megacracks Nuevos Fichajes Isco",
+      "Liga Este Últimos Fichajes Isco",
+      "Adrenalyn XL Isco",
+      "Las Fichas de la Liga Isco"
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2012/13",
+    "cromos": [
+      "Megacracks Isco Normal",
+      "Megacracks Mega Evolution Isco",
+      "Liga Este Isco Normal",
+      "Adrenalyn XL Jugón Isco",
+      "Adrenalyn XL Ídolo Isco",
+      "Adrenalyn XL Edición Limitada Isco",
+      "Las Fichas de la Liga Isco",
+      "Las Fichas de la Liga Superstar Isco",
+      "Las Fichas de la Liga TOP Isco",
+      "Sega World Club Champion Football Isco",
+      "Sega World Club Champion Football Young Stars Isco",
+      "UEFA Champions League Stickers Isco",
+      "Adrenalyn XL UEFA Champions League Limited Edition Isco",
+      "Adrenalyn XL UEFA Champions League Update Edition Isco",
+      "Adrenalyn XL UEFA Champions League Update Edition Game Changer Isco"
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2013/14",
+    "cromos": [
+      "",
+      ""
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2014/15",
+    "cromos": [
+      "",
+      ""
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2015/16",
+    "cromos": [
+      "",
+      ""
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2016/17",
+    "cromos": [
+      "",
+      ""
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2017/18",
+    "cromos": [
+      "",
+      ""
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2018/19",
+    "cromos": [
+      "",
+      ""
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2019/20",
+    "cromos": [
+      "",
+      ""
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2020/21",
+    "cromos": [
+      "Megacracks Isco Normal",
+      "Liga Este Isco Normal",
+      "Liga Este Serie 10 Isco",
+      "Liga Este Brasil Isco Normal",
+      "Adrenalyn XL Bis Isco",
+      "Adrenalyn XL FIFA 365 - Update Edition Isco",
+      "FIFA 365 Stickers Luka Modric/Isco",
+      "Panini Chronicles - Absolute Tools of the Trade Isco",
+      "Topps UEFA Champions League Stickers Isco",
+      "Topps Match Attax UEFA Champions League Isco",
+      "Topps Match Attax UEFA Champions League Man of the Match Isco"
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2021/22",
+    "cromos": [
+      "Megacracks Isco Ficha Bis",
+      "Liga Este Isco Normal",
+      "Donruss Road to Qatar Kit Kings Isco",
+      "FIFA 365 Stickers Lucas Vázquez/Isco",
+      "Panini Podium Real Madrid Isco HM",
+      "Panini Podium Real Madrid Isco GOLD",
+      "Panini Podium Real Madrid Isco CHR",
+      "Panini Podium Real Madrid Isco PRE",
+      "Panini Podium Real Madrid Isco PT",
+      "Panini Podium Real Madrid Rookie Tribute Isco",
+      "Panini Podium Real Madrid Extra Gold Isco",
+      "Topps Chrome UEFA Champions & Europa League Isco",
+      "Toops Finest Flashbacks UEFA Champions League Isco",
+      "Topps Match Attax UEFA Champions & Europa League Isco"
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2022/23",
+    "cromos": [
+      "Megacracks Nuevos Fichajes Isco",
+      "Liga Este Últimos Fichajes Isco",
+      "Adrenalyn XL Isco",
+      "Adrenalyn XL Super Crack Isco",
+      "Select La Liga Select Memorabilia Isco",
+      "Select La Liga Select Swatches Isco",
+      "Topps Match Attax UEFA Champions & Europa League Extra Isco",
+      "Topps Match Attax UEFA Champions & Europa League Extra - Performance Boost Isco"
+    ],
+    "portada": ""
+  },
+  {
+    "nombre": "Temporada 2023/24",
+    "cromos": [
+      "Megacracks Edición Limitada Top Fichaje Isco",
+      "Megacracks Nuevos Fichajes Isco",
+      "Liga Este Últimos Fichajes Isco",
+      "Liga Este Synergy Isco/Fekir",
+      "Adrenalyn XL Isco",
+      "Adrenalyn XL 15 Super Heroes Isco",
+      "Adrenalyn XL Super Crack Isco",
+      "Select La Liga Isco",
+      "Topps Match Attax UEFA Club Competitions Scream Team Isco",
+      "Topps Match Attax UEFA Club Competitions Extra Limited Edition Isco",
+      "Topps Total Football Isco",
+      "Topps Total Football INF Isco",
+      "Topps Total Football Birthday Celebration Isco"
     ],
     "portada": ""
   },
@@ -17,8 +175,11 @@
       "Liga Este Extra Gold Isco",
       "Liga Este Chicles/The Very Best Isco",
       "Adrenalyn XL Isco Capitán",
-      "UEFA Club Competitions 24/25 Isco",
-      "UEFA Club Competitions 24/25 Isco Trophy Chasers"
+      "Adrenalyn XL Billion Isco",
+      "Adrenalyn XL Edición Limitada Isco",
+      "Adrenalyn XL Premium Oro Isco",
+      "Topps Chrome UEFA Club Competitions 24/25 Isco",
+      "Topps Chrome UEFA Club Competitions 24/25 Isco Trophy Chasers"
     ],
     "portada": ""
   },
@@ -31,6 +192,7 @@
       "Megacracks Flashback Denilson/Isco",
       "Megacracks MegaPower",
       "Megacracks Special One Black Isco",
+      "Megacracks Autografo Original Isco",
       "Liga Este Isco Normal",
       "Liga Este Mix Isco/Lo Celso",
       "Liga Este Extra Gold Isco",
